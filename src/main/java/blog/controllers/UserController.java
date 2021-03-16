@@ -89,13 +89,13 @@ public class UserController {
 
 	@GetMapping("/{id}")
 	public ResponseEntity<User> buscar(@PathVariable("id") long id) {
-		//TODO Tratar quando não tem nenhum encontrado
+		// TODO Tratar quando não tem nenhum encontrado.
 		return ResponseEntity.ok(userRepository.findById(id).get());
 	}
 
 	@GetMapping
 	public ResponseEntity<List<User>> buscarTodos() {
-
+		// TODO Tratar quando não tem nenhum encontrado.
 		return ResponseEntity.ok(userRepository.findAll());
 	}
 
