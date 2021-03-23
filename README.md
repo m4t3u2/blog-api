@@ -1,7 +1,7 @@
 # Blog API
 Blog API Spring Boot
 
-# Rodar SQL
+# Execute SQL
 ```
 INSERT INTO roles(name) VALUES('ROLE_USER');
 INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
