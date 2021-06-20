@@ -1,4 +1,4 @@
-package blog.repository;
+package blog.repository.role;
 
 import java.util.Optional;
 

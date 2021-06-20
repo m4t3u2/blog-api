@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import blog.security.jwt.AuthEntryPointJwt;
 import blog.security.jwt.AuthTokenFilter;
-import blog.security.services.UserDetailsServiceImpl;
+import blog.security.userDetails.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity

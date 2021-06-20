@@ -22,8 +22,8 @@ import blog.models.Role;
 import blog.models.User;
 import blog.payload.request.SignupRequest;
 import blog.payload.response.MessageResponse;
-import blog.repository.RoleRepository;
-import blog.repository.UserRepository;
+import blog.repository.role.RoleRepository;
+import blog.repository.user.UserRepository;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController

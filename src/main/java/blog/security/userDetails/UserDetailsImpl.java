@@ -1,4 +1,4 @@
-package blog.security.services;
+package blog.security.userDetails;
 
 import java.util.Collection;
 import java.util.List;

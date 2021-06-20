@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import blog.models.Post;
 import blog.payload.response.MessageResponse;
-import blog.repository.PostRepository;
+import blog.repository.post.PostRepository;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController

@@ -1,4 +1,4 @@
-package blog.repository;
+package blog.repository.user;
 
 import java.util.Optional;
 
