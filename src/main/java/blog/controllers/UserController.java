@@ -6,7 +6,6 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,9 +31,9 @@ public class UserController {
 	@PostMapping
 	public ResponseEntity<Void> cadastrar(@Valid @RequestBody SignupRequest signUpRequest) {
 
-		User cadastrado = userService.cadastrar(signUpRequest);
+		User savedUser = userService.cadastrar(signUpRequest);
 
-		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(cadastrado.getId())
+		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId())
 				.toUri();
 
 		return ResponseEntity.created(uri).build();
@@ -42,16 +41,18 @@ public class UserController {
 
 	@GetMapping("/{id}")
 	public ResponseEntity<User> buscar(@PathVariable("id") long id) {
+
 		User user = userService.buscar(id);
 
-		return ResponseEntity.status(HttpStatus.OK).body(user);
+		return ResponseEntity.ok(user);
 	}
 
 	@GetMapping
 	public ResponseEntity<List<User>> buscarTodos() {
+
 		List<User> users = userService.buscarTodos();
 
-		return ResponseEntity.ok().body(users);
+		return ResponseEntity.ok(users);
 	}
 
 }
