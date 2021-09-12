@@ -23,7 +23,7 @@ public class PostService {
 
 	public List<Post> buscarTodos() {
 
-		List<Post> posts = postRepository.findAll();
+		List<Post> posts = postRepository.findAllByOrderByDateDesc();
 
 		return posts;
 	}

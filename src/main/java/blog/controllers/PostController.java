@@ -29,6 +29,7 @@ public class PostController {
 	@PostMapping
 	public ResponseEntity<Void> salvar(@Valid @RequestBody Post post) {
 
+		//TODO Não permitir save publico.
 		Post savedPost = postService.salvar(post);
 
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedPost.getId())
